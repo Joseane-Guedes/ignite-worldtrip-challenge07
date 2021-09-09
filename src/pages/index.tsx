@@ -1,7 +1,8 @@
 import { Flex } from "@chakra-ui/react";
-import Header from "../components/Header";
 import Banner from "../components/Banner";
 import Description from "../components/Descriptions";
+import Header from "../components/Header";
+import Underscore from "../components/Underscore/Underscore";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <Header />
       <Banner />
       <Description />
+      <Underscore />
     </Flex>
   )
 }
