@@ -1,4 +1,4 @@
-import { Flex } from "@chakra-ui/react";
+import { Flex, Heading } from "@chakra-ui/react";
 import Banner from "../components/Banner";
 import Description from "../components/Descriptions";
 import Header from "../components/Header";
@@ -11,6 +11,16 @@ export default function Home() {
       <Banner />
       <Description />
       <Underscore />
+      <Heading
+      textAlign="center"
+      fontWeight="500"
+      mb={["5","14"]}
+      fontSize={["lg",
+      "3xl",
+      "4xl"]}
+    >
+    Vamos nessa?<br/>Então escolha seu continente
+    </Heading>
     </Flex>
   )
 }
