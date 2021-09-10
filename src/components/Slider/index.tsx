@@ -84,7 +84,7 @@ export default function Slider() {
                   fontSize={["0.8rem", "1xl", "2xl"]}
                   mt={["2", "4"]}
                 >
-                  O continente mais antigo
+                  O continente mais antigo.
                 </Text>
               </a>
             </Link>

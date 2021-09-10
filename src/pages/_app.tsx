@@ -3,6 +3,8 @@ import { AppProps } from "next/app";
 import { theme } from "../styles/theme";
 
 
+import '../styles/slider.scss';
+
 // Import Swiper styles
 import 'swiper/scss';
 import 'swiper/scss/navigation';
