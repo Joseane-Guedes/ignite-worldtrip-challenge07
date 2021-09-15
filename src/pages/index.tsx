@@ -18,14 +18,6 @@ interface HomeProps {
   }[]
 }
 
-interface HomeProps {
-  continents: {
-    slug: string;
-    title: string;
-    summary: string;
-    image: string;
-  }[];
-}
 
 export default function Home({ continents }: HomeProps) {
   return (
@@ -56,7 +48,8 @@ export const getStaticProps: GetStaticProps = async () => {
   const prismic = getPrismicClient();
 
   const response = await prismic.query(
-    [Prismic.Predicates.at("document.type", "continent")]);
+    [Prismic.Predicates.at("document.type", "continent")]
+    );
 
   const continents = response.results.map(continent => {
     return {
