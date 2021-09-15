@@ -1,10 +1,10 @@
 /* eslint-disable jsx-a11y/alt-text */
 import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
 
-export default function City() {
+export default function City({ name, country, flag, image }) {
   return (
     <Box borderRadius="4px" overflow="hidden">
-      <Image src="/london.png" h="170px" w="100%" />
+      <Image src={image} alt={`${name}, ${country}`} h="170px" w="100%" />
       <Flex
         p="6"
         align="center"
@@ -16,16 +16,14 @@ export default function City() {
       >
         <Flex direction="column">
           <Heading fontSize="xl" fontWeight="500">
-            {" "}
-            Londres{" "}
+            {name}
           </Heading>
           <Text mt="3" fontSize="md" color="gray.500" fontWeight="500">
-            {" "}
-            Reino Unido{" "}
+            {country}
           </Text>
         </Flex>
         <Image
-          src="/ukflag.png"
+          src={flag}
           w="30px"
           h="30px"
           borderRadius="50%"
