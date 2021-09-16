@@ -30,8 +30,7 @@ export default function Home({ continents }: HomeProps) {
         textAlign="center"
         fontWeight="500"
         mb={["5", "14"]}
-        fontSize={["lg", "3xl", "4xl"]}
-        textShadow="1px 1px  #47585B"
+        fontSize={["lg", "3xl", "4xl"]} 
         m="6"
       >
         Vamos nessa?

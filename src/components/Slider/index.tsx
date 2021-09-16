@@ -1,7 +1,9 @@
 import { Flex, Heading, Text } from "@chakra-ui/react";
 import Link from "next/link";
-import { A11y, Navigation, Pagination, Scrollbar } from "swiper";
+import SwiperCore,{ A11y, Navigation, Pagination, Scrollbar,  Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+
+SwiperCore.use([Autoplay,Pagination,Navigation]);
 
 
 interface SliderProps {
@@ -29,8 +31,12 @@ export default function Slider({continents}: SliderProps) {
         navigation
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log("slide change")}
+        spaceBetween={30} centeredSlides={true} autoplay={{
+          "delay": 3000,
+          "disableOnInteraction": false
+        }} 
+        //onSwiper={(swiper) => console.log(swiper)}
+        //onSlideChange={() => console.log("slide change")}
         style={{ width: "100%", flex: "1" }}
       >
 
@@ -51,8 +57,9 @@ export default function Slider({continents}: SliderProps) {
            <Link href={`/continent/${continent.slug}`}>
              <a>
                <Heading
-                 fontSize={["3xl", "4xl", "5xl"]}
-                 color="gray.100"
+                 color="gray.50"
+                 _hover={{ color: "yellow.300" }}
+                 fontSize="3rem"
                  fontWeight="bold"
                >
                 {continent.title}
@@ -62,6 +69,7 @@ export default function Slider({continents}: SliderProps) {
                  color="gray.300"
                  fontSize={["0.8rem", "1xl", "2xl"]}
                  mt={["2", "4"]}
+
                >
                  {continent.summary}
                </Text>

@@ -23,7 +23,6 @@ export default function Cities({continent}: ContinentProps) {
           country={city.country}
           flag={city.flag}
           image={city.thumbnail}
-
           />
         ))}
           
